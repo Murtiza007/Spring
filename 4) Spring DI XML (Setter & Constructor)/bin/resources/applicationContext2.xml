@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="BeanClasses.School" id="sc2">
+    	<constructor-arg value="SP SCHOOL"/>
+    	<constructor-arg value="8TH"/>
+    	<constructor-arg value="A"/>
+    
+    </bean>
+    <bean class="BeanClasses.Student" id="std2">
+    	<constructor-arg value="1001"/>
+    	<constructor-arg value="MOmin"/>
+    	<constructor-arg ref="sc2"/>
+    
+    </bean>
+    
+    <bean class="BeanClasses.School" id="sc">
+    	<constructor-arg value="SP SCHOOL"/>
+    	<constructor-arg value="8TH"/>
+    	<constructor-arg value="A"/>
+    
+    </bean>
+    <bean class="BeanClasses.Student" id="std">
+    	<constructor-arg value="1001"/>
+    	<constructor-arg value="MOIN"/>
+    	<constructor-arg ref="sc"/>
+    
+    </bean>
+    
+
+</beans>
