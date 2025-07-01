@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="Beans.Department" id="department1" autowire-candidate="true">
+    	<property name="dept_id" value="101" />
+    	<property name="emp_salary" value="10,000" />
+    	<property name="emp_proj" value="Spring" />
+    </bean>   
+    
+    <bean class="Beans.Department" id="department" autowire-candidate="false">
+    	<property name="dept_id" value="106" />
+    	<property name="emp_salary" value="20,000" />
+    	<property name="emp_proj" value="Spring" />
+    </bean> 
+    
+    <bean class="Beans.Employee" id="emp" autowire="byName">
+    	<property name="emp_id" value="111" />
+    	<property name="emp_name" value="Moin" />
+     <!--	<property name="dept" ref="dept1" /> -->
+    </bean>  
+
+</beans>
